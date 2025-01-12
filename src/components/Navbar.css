@@ -1,0 +1,75 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #cabbbb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease;
+  height: 5rem; /* 80px */
+  z-index: 50;
+}
+
+.navbar-expanded {
+  height: auto;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 5rem; /* 80px */
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+color: black;
+  max-height: 80vh; /* Limit height for mobile menu */
+  overflow-y: auto; 
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+    color: black;
+  }
+}
+
